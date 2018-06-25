@@ -1,4 +1,5 @@
-### Playground to write test cases and tests
+### Playground to write test cases and tests.
+ 
 
 This is a simple TODO project.
 It contains three parts:
