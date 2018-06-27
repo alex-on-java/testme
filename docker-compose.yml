@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+    load-balancer:
+        depends_on:
+          - live
+          - staging
+          - e1dev
+          - e2dev
+        image: nginx
+        volumes:
+           - ./nginx/testme.nginx.conf:/etc/nginx/nginx.conf
+        ports:
+            - 80:80
+        restart: alwaysd
+
+    live:
+        image: testme:cf9584d
+        restart: always
+
+    staging:
+        image: testme:cf9584d
+        restart: always
+
+    e1dev:
+        image: testme:cf9584d
+        restart: always
+    e2dev:
+        image: testme:cf9584d
+        restart: always
