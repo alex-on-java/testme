@@ -1,6 +1,7 @@
 .idea
 backend/backend.iml
 frontend/frontend.iml
+testing/testing.iml
 backend/target/
 backend/src/main/resources/static
 frontend/node_modules

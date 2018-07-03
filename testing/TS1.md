@@ -2,23 +2,36 @@
 
 ## ToDo list' Module ##
 
-####Testing Enviroments ####
-**User should be able to run the APP in browsers:**
-* Google Chrome 67
-* Microsoft IE9
-* Microsoft Edge
-* Mozilla Fierfox 60
-* MAC Safary 10
-* Chrome-mibile 67
-* MAC Safary-mobile 10
+#### Testing Enviroments ####
+**User should be able to run the APP on platforms and browsers:**
+
+* Windows10:
+	* Google Chrome 67
+	* Microsoft IE9
+	* Microsoft Edge
+	* Mozilla Fierfox 60
+
+* MacOS10:
+	* Safary 10
+	* Google Chrome 67
+	* Mozilla Fierfox 60
+
+* Android6:
+	** Google Chrome 67
+
+* iOS11:
+	* Safary 10
+	* Google Chrome 67
 
 **Variables**
  * _URL_ - url of the main page
  * _BROWSER_ - default browser for tests
  * _CORRECT_TODO_LIST_PAGE_ - current default view of the page with todo list
 
-**Testing Data**
-* DEV - http://e1.dev.testme.buyanov.ru/
+**Testing Enviroments**
+*  http://e*.dev.testme.buyanov.ru - DEV
+*  http://staging.testme.buyanov.ru - staging
+*  http://live.testme.buyanov.ru - live
 
 
 **Before each**
