@@ -22,12 +22,34 @@ class App extends Component {
 
   createList() {
     if (this.state.list) {
-      let i = 0;
-      return this.state.list.map(el => <li key={i++}>{el}</li>)
+      return this.state.list.map((el, i) => <li key={i}>{el}</li>)
     } else {
       return <h4>Error!</h4>
     }
   }
+
+  addNewElement = () => {
+    if (!this.inputField || !this.inputField.value) {
+      return;
+    }
+    const newValue = this.inputField.value;
+    fetch('api/items', {
+      method: 'post',
+      body: newValue
+    }).then(response => {
+      if (response.status !== 200) {
+        return Promise.reject(response);
+      } else {
+        return Promise.resolve(response.text());
+      }
+    }).then(
+      item => {
+        this.setState({ list: [...this.state.list, item] });
+        this.inputField.value = '';
+      },
+      e => console.error(e)
+    );
+  };
 
   render() {
 
@@ -40,6 +62,10 @@ class App extends Component {
           <ol>
             {this.createList()}
           </ol>
+        </div>
+        <div>
+          <input type="text" ref={element => { this.inputField = element; }} />
+          <button onClick={this.addNewElement}>Add</button>
         </div>
       </div>
     );
