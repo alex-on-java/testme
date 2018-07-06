@@ -12,7 +12,7 @@ services:
            - ./nginx/testme.nginx.conf:/etc/nginx/nginx.conf
         ports:
             - 80:80
-        restart: alwaysd
+        restart: always
 
     live:
         image: testme:cf9584d
@@ -26,5 +26,5 @@ services:
         image: testme:cf9584d
         restart: always
     e2dev:
-        image: testme:cf9584d
+        image: testme:50baa5c
         restart: always
