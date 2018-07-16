@@ -35,7 +35,7 @@
 
 
 **Before each**
-1. Clear the _BROWSER_ chaсh
+1. Clear the _BROWSER_ caсh
 2. Open the _BROWSER_
 3. Go to _URL
 
@@ -138,17 +138,6 @@
 
 **Expected result**
  - User see - maximum namber of characters 4
-
-
-
-
-
-
-
-
-
-
-
 
 
 
